@@ -1,6 +1,8 @@
 # Aliases in Bash
 
-## Roots
+Boost productivity, minimize errors, and personalize your command-line experience with ease.
+
+## Foundations
 
 The `~/.bashrc` file is a script that Bash runs whenever it is started interactively.
 
