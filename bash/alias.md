@@ -34,7 +34,7 @@ The `~/.bashrc` file is a script that Bash runs whenever it is started interacti
 
 - This command tells Bash to re-read the `.bashrc` file, which incorporates the changes immediately.
 
-### Bonus: Test your alias
+### Test your alias
 
 - **Test the alias**: Try using the `g` alias:
 
