@@ -8,7 +8,7 @@ The `~/.bashrc` file is a script that Bash runs whenever it is started interacti
 
 ## Guide to create an alias
 
-### Step 1. Edit the `~/.bashrc` file
+### Step 1. Open the `~/.bashrc` file
 
 - **Open `~/.bashrc` file**: You can use a text editor like nano, vi, or any text editor of your choice.
 
