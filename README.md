@@ -1,2 +1,2 @@
-# notepad
+# ideas
 For taking-note purposes
