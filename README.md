@@ -1,2 +1,2 @@
-# ideas
+# Notes
 For taking-note purposes
