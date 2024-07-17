@@ -19,7 +19,7 @@ alias gp="git push"
 alias gst="git status"
 alias gss="git status --short"
 alias gg="git log"
-alias ggol="git log --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
+alias ggol="git log --pretty='%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
 
 # OS
 
