@@ -17,12 +17,10 @@ echo '{
 }' > .prettierrc
 
 # Create the .prettierignore file with the specified rules
-echo "
-build
+echo "build
 dist
 package-lock.json
-node_modules
-" > .prettierignore
+node_modules" > .prettierignore
 
 # Modify package.json to add the format script
 if [ -f package.json ]; then
