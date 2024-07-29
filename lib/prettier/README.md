@@ -1,4 +1,4 @@
-# Config prettier with an script
+# Config prettier usign script shell
 
 To run the prettier configuration script you will need to:
 
