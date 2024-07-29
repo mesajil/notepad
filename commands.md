@@ -12,6 +12,12 @@ shutdown -s -t 7200
 shutdown -a
 ```
 
+### Apagar inmediatamente
+
+```bash
+shutdown -s -f
+```
+
 ## Apagar en una hora específica
 
 Sí, puedes programar un apagado a una hora específica usando el comando `at` en Windows. Aquí te muestro cómo hacerlo:
