@@ -28,3 +28,7 @@ Windows host name debe ser menor de 15 caracteres
 Permitir firewall en el puerto 1521
 
 
+---
+
+check point 
+
