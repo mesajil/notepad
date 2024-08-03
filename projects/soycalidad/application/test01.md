@@ -34,7 +34,7 @@ Se deberá crear un menú con las 4 opciones mencionadas:
 
 3. Actualizar:
 
-   Esta opción permite actualizar un producto. Para ello será necesario indicar el id del producto a editar. Luego se preguntará por cada atributo si se desea actualizar. En caso se desee actualizar un atributo específico, si coloca "sí" y se ingresa el valor para actualizar.
+   Esta opción permite actualizar un producto. Para ello será necesario indicar el id del producto a editar. Luego se preguntará por cada atributo si se desea actualizar. En caso se desee actualizar un atributo específico, se deberá indicar el valor adecuadamente:
 
    1. Actualizar nombre: Se deberá ingresar un nombre no nulo.
    2. Actualizar precio: Se deberá ingresar un número.
@@ -100,29 +100,29 @@ De acuerdo al análisis previo se propone el siguiente algoritmo:
 
 ```mermaid
 graph TD
-    A[Definir diccionarios relevantes: productos, precios, stocks] --> B[Combinar diccionarios relevantes y crear diccionario único]
-    B --> C{Mientras "salir" sea falso}
-    C --> D1[Mostrar menu: Listar productos y mostrar menu de opciones]
-    C --> D2[Leer opción a elegir]
-    C --> D3[Ejecutar id de la función elegida]
+   A[Definir diccionarios relevantes: productos, precios, stocks] --> B[Combinar diccionarios relevantes y crear diccionario único]
+   B --> C{Mientras 'salir' sea falso}
+   C --> D1[Mostrar menú: Listar productos y mostrar menú de opciones]
+   C --> D2[Leer opción a elegir]
+   C --> D3[Ejecutar id de la función elegida]
 
-    D3 --> E1{Si la opción es "agregar"}
-    E1 --> F1[Obtener datos del nuevo producto]
-    F1 --> F2[Agregar nuevo producto al diccionario de productos]
+   D3 --> E1{Si la opción es 'agregar'}
+   E1 --> F1[Obtener datos del nuevo producto]
+   F1 --> F2[Agregar nuevo producto al diccionario de productos]
 
-    D3 --> E2{Si la opción es "eliminar"}
-    E2 --> G1[Obtener ID del producto a eliminar]
-    G1 --> G2[Eliminar producto del diccionario de productos]
+   D3 --> E2{Si la opción es 'eliminar'}
+   E2 --> G1[Obtener ID del producto a eliminar]
+   G1 --> G2[Eliminar producto del diccionario de productos]
 
-    D3 --> E3{Si la opción es "actualizar"}
-    E3 --> H1[Obtener ID del producto a actualizar]
-    H1 --> H2[Obtener datos del producto a actualizar]
-    H2 --> H3[Actualizar el producto del diccionario de productos]
+   D3 --> E3{Si la opción es 'actualizar'}
+   E3 --> H1[Obtener ID del producto a actualizar]
+   H1 --> H2[Obtener datos del producto a actualizar]
+   H2 --> H3[Actualizar el producto del diccionario de productos]
 
-    D3 --> E4{Si la opción es "salir"}
-    E4 --> I1[Setear el valor de "salir" a verdadero]
+   D3 --> E4{Si la opción es 'salir'}
+   E4 --> I1[Setear el valor de 'salir' a verdadero]
 
-    C --> J[Mostrar mensaje de despedida]
+   C --> J[Mostrar mensaje de despedida]
 ```
 
 ### Variables relevantes
