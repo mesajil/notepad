@@ -1,4 +1,4 @@
-# Python - Test 01
+# Test 01 - Python
 
 Se deberá realizar un CRUD de prendas de vestir.
 
@@ -67,7 +67,7 @@ Elija opción:
 Entrada de datos: El programa no necesita ninguna entrada específica.
 Salida de datos: Lista de productos y menú de opciones.
 
-## Solución
+## solution
 
 ### Algoritmo
 
@@ -186,3 +186,14 @@ Modo de uso:
 ```python
 product = getNewProduct() # Obtener datos del producto
 ```
+
+## Development
+
+El proyecto deberá incluir los siguientes requisitos:
+
+## Plan
+
+- [x] Crear repositorio del proyecto en github
+- [x] Añadir README del repositorio
+- [ ] Desarrollar programa
+- [ ]
