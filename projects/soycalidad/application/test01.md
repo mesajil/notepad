@@ -1,6 +1,6 @@
-# Test 01 - Python
+# Test 01
 
-Se deberá realizar un CRUD de prendas de vestir.
+Desarollar un programa en Python que realize operaciones de crear, actualizar y eliminar productos de una tienda de prendas de vestir.
 
 ## Ejercicio
 
@@ -19,13 +19,13 @@ Stock = {1:50, 2:45, 3:30, 4:15}
 # [4] Salir
 ```
 
-## Analisis
+## Análisis
 
 Se deberá crear un menú con las 4 opciones mencionadas:
 
 1. Agregar:
 
-   Esta opción permite agregar nuevos productos. Deberá desplegar adecuadamente un formulario para pedir los siguientes datos: nombre de producto, precio y stock inicial. Si todos los datos son ingresados correctamente, se genera un nuevo producto con id único.
+   Esta opción permite agregar un nuevo producto. Solicita los siguientes datos: nombre de producto, precio y stock inicial. Si todos los datos son ingresados correctamente, se genera un nuevo producto con un id único.
    También se podrá cancelar la operación si fuese el caso.
 
 2. Eliminar
@@ -65,6 +65,7 @@ Elija opción:
 ```
 
 Entrada de datos: El programa no necesita ninguna entrada específica.
+
 Salida de datos: Lista de productos y menú de opciones.
 
 ## solution
@@ -125,67 +126,68 @@ graph TD
    C --> J[Mostrar mensaje de despedida]
 ```
 
-### Variables relevantes
+### Variables
 
-1. Diccionario de productos: me permitirá listar y manipular la lista a lo largo de todo el programa.
-2. Diccionario de opciones: Contendrá la lista de opciones
+1. **Diccionario de productos**
 
-#### Diccionario de productos
+   Contiene información sobre toda la lista de productos. Inicialmente se combinará los tres objetos originales en uno solo:
 
-Para mejorar la experiencia de desarrollo, se combinará los tres objetos dados en uno solo:
+   ```python
+   products = {
+      1: {
+         'name': 'Pantalones',
+         'price': 200.00,
+         'stock': 50
+      },
+      ...
+   }
 
-```python
-products = {
-  1: {
-    name: 'Pantalones',
-    price: 200.00,
-    stock: 50
-  },
-  ...
-}
+   print(products[1].stock) # Acceder al stock del producto 1
+   ```
 
-print(products[1].stock) # Acceder al stock del producto 1
-```
+2. **Diccionario de opciones**
 
-#### Diccionario de opciones
+   Contiene información relevante de la opciones del menú. Contiene:
 
-El diccionario de opciones deberá contener entre otros datos: el id de la opción, el nombre y la función a ejecutar.
+   - id de la opción
+   - name: el nombre de la opción
+   - fn: la función a ejecutar
+   - type: Indica el tipo de opción. Por ejemplo, 'salir' para indicar que la opción termina el programa.
 
-```python
-options = {
-  1: {
-    name: 'Agregar',
-    fn: agregar
-  },
-  ...
-}
+   ```python
+   options = {
+      1: {
+         'name': 'Agregar',
+         'fn': agregar,
+         'type': None
+      },
+      ...
+   }
 
-agregar(products) # La función permite agregar un nuevo producto
-```
+   agregar(products) # La función permite agregar un nuevo producto
+   ```
 
-### Funciones relevantes
+### Funciones
 
-1. agregar: Agregar producto
-2. eliminar: Eliminar producto
-3. actualizar: Actualizar producto
-4. salir: Retorna un booleano indicando si el programa debe terminarse o no.
-5. getNewProduct: Obtiene los datos de un producto nuevo a través de un formulario.
-6. getProductId: Obtiene el id del producto a través de un formulario
-7. getProductData: Obtiene los datos del producto a actualizar a través de un formulario
-8. getProductsDicc: Combina los diccionarios de productos, precios y stocks en uno solo
-9. getOption: Obtiene la opción del menú
+1. **get_option**
 
-#### Obtner un nuevo producto
+   Obtiene la opción del menú. Itera cuantas veces sea necesario para obtener un valor de opción válido.
 
-La función getNewProduct maneja la interfaz de usuario que recopila los datos del producto a crear.
+2. **get_new_product**
 
-Esta función será utilizada por la función "agregar" para obtener los datos del producto a agregar.
+   La función maneja la interfaz de usuario que recopila los datos del producto a crear.
 
-Modo de uso:
+   Esta función será utilizada por la función "agregar" para obtener los datos del producto a agregar.
 
-```python
-product = getNewProduct() # Obtener datos del producto
-```
+   Modo de uso:
+
+   ```python
+   product = get_new_product() # Obtener datos del producto
+   ```
+
+3. **get_product_id**
+
+   Obtiene el id del producto a través de un formulario
 
 ## Development
 
@@ -195,5 +197,8 @@ El proyecto deberá incluir los siguientes requisitos:
 
 - [x] Crear repositorio del proyecto en github
 - [x] Añadir README del repositorio
-- [ ] Desarrollar programa
-- [ ]
+- [ ] Program Tests
+- [x] Desarrollar programa
+- [ ] Deployment
+  - [ ] .exe program
+  - [ ] cloud platform
