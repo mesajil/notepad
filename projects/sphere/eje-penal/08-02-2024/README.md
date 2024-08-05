@@ -1,3 +1,7 @@
+La siguiente tarea pretende añadir las siguientes correcciones al modelo entregado.
+
+1. Remover la parte añadida por Luis C.
+
 PPL Persona privada de la libertad
 
 Persona ID primeros en la tabla
@@ -86,11 +90,11 @@ Elementos actualizados
 
 ## Generate DDL
 
-s
-
 ## Generate DD
 
 Generar diccionario de datos
+
+Para ello se utiliza el siguiente usuario de Oracle:
 
 BD: BDSPH01
 Usuario: ejepenal / sR147814
