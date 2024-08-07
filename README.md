@@ -1,1 +1,2 @@
-# notepad
+# Notepad
+For taking-note purposes
