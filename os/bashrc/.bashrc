@@ -26,6 +26,10 @@ alias ggol="git log --pretty='%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%a
 
 alias dk=docker
 
+# Docker Compose
+
+alias dkc="docker-compose"
+
 # OS
 
 alias sd="shutdown"
