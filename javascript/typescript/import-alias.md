@@ -1,8 +1,6 @@
 # React + TypeScript + Vite
 
-## Add paths to tsconfig.json
-
-Add to compilerOptions the baseUrl and paths
+## Update `tsconfig.json`
 
 ```json
 {
@@ -15,6 +13,7 @@ Add to compilerOptions the baseUrl and paths
       "path": "./tsconfig.node.json"
     }
   ],
+  // Add the following
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -24,9 +23,7 @@ Add to compilerOptions the baseUrl and paths
 }
 ```
 
-## Add paths to tsconfig.app.json
-
-Add to compilerOptions the paths object
+## Update `tsconfig.app.json`
 
 ```json
 {
@@ -38,6 +35,10 @@ Add to compilerOptions the paths object
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    // Add the following
+    "paths": {
+      "@/*": ["./src/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -52,34 +53,31 @@ Add to compilerOptions the paths object
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-
-    /* Paths */
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src"]
 }
 ```
 
-## Add plugin vite-tsconfig-paths
+## Update `vite.config.ts`
 
-Install dependency vite-tsconfig-paths and add the plugin tsconfigPaths in vite.config.ts
+Install `vite-tsconfig-paths`:
 
 ```bash
 npm i -D vite-tsconfig-paths
 ```
 
-File vite.config.ts:
+Add `tsconfigPaths`:
 
 ```typescript
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+// Add the following
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // Add the following
   plugins: [react(), tsconfigPaths()],
 })
 ```

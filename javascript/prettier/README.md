@@ -9,9 +9,12 @@ To run the prettier configuration script you will need to:
   ```
   sh setup_prettier.sh
   ```
+
   or
+
   ```
   ./setup_prettier.sh
   ```
+
 - Because the script uses the json dependency, it will ask you to accept its installation. Press “yes” or “y” to continue with the installation.
 - 🎉 Done, you have prettier configured in your project.

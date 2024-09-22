@@ -1,8 +1,8 @@
-chrome.action.onClicked.addListener((tab) => {
+chrome.action.onClicked.addListener(tab => {
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
     func: () => {
-      alert("Hello from Service Worker!");
+      alert('Hello from Service Worker!')
     },
-  });
-});
+  })
+})
