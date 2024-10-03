@@ -44,10 +44,16 @@ The `~/.bashrc` file is a script that Bash runs whenever it is started interacti
 
 - This should output the same result as `git --version`.
 
-## Alias
+### List all Aliases
+
+  ```bash
+  alias
+  ```
+
+## Aliases
 
 ```bash
-# Common
+# Basics
 
 alias ll='ls -l'
 alias la='ls -la'
@@ -59,7 +65,6 @@ alias g=git
 alias ga="git add"
 alias gb="git branch"
 alias gco="git checkout"
-alias gci="git commit"
 alias gd="git diff"
 alias gdca="git diff --cached"
 alias gds="git diff --staged"
@@ -70,16 +75,12 @@ alias gst="git status"
 alias gss="git status --short"
 alias gg="git log"
 alias ggol="git log --pretty='%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
+alias gc="git commit --verbose"
+alias gc!="git commit --verbose --amend"
 
 # Docker
 
 alias dk=docker
-
-# Docker Compose
-
 alias dkc="docker-compose"
 
-# OS
-
-alias sd="shutdown"
 ```
