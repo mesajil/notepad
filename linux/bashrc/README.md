@@ -46,11 +46,11 @@ The `~/.bashrc` file is a script that Bash runs whenever it is started interacti
 
 ### List all Aliases
 
-  ```bash
-  alias
-  ```
+```bash
+alias
+```
 
-## Aliases
+## Basic aliases
 
 ```bash
 # Basics
