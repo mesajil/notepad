@@ -16,6 +16,12 @@ The `~/.bashrc` file is a script that Bash runs whenever it is started interacti
   code ~/.bashrc
   ```
 
+- **Open `~/.bash_aliases` file**:
+
+  ```bash
+  code ~/.bash_aliases
+  ```
+
 ### Step 2. Add your alias
 
 - **Add your alias**: To create an alias for `git` as `g`, add the following line to your `.bashrc` file:
@@ -58,6 +64,10 @@ alias
 alias ll='ls -l'
 alias la='ls -la'
 alias ..="cd .."
+
+# Python
+
+alias py=python3
 
 # Git
 
