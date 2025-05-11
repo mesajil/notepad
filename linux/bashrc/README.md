@@ -61,18 +61,24 @@ alias
 ```bash
 # Basics
 
+
 alias ll='ls -l'
 alias la='ls -la'
 alias ..="cd .."
 
+
 # Python
+
 
 alias py=python3
 
+
 # Git
+
 
 alias g=git
 alias ga="git add"
+alias gaa="git add -A"
 alias gb="git branch"
 alias gco="git checkout"
 alias gd="git diff"
@@ -83,14 +89,18 @@ alias gl="git pull"
 alias gp="git push"
 alias gst="git status"
 alias gss="git status --short"
-alias gg="git log"
+alias glog="git log"
+alias gg="glog"
 alias ggol="git log --pretty='%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
+alias glogol="ggol"
 alias gc="git commit --verbose"
+alias gci="gc"
 alias gc!="git commit --verbose --amend"
+alias gci!="gc!"
 
 # Docker
 
+
 alias dk=docker
 alias dkc="docker-compose"
-
 ```
