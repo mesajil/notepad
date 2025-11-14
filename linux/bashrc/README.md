@@ -94,15 +94,19 @@ alias gst="git status"
 alias gss="git status --short"
 alias gg="git log"
 alias ggol="git log --pretty='%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
+alias gol="ggol"
 alias gc="git commit --verbose"
 alias gci="gc"
 alias gca="git commit --verbose --amend"
 alias gc!="git commit --verbose --amend --no-edit"
+
 # Docker
 alias dk=docker
 alias dkc="docker-compose"
+
 # Python
 alias py=python3
+
 # IDE
 alias cu='cursor .'
 alias ws='windsurf .'
