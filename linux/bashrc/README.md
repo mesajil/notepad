@@ -59,23 +59,25 @@ alias
 ## Basic aliases
 
 ```bash
-# Basics
-
-
+# OS
 alias ll='ls -l'
 alias la='ls -la'
 alias ..="cd .."
-
-
-# Python
-
-
-alias py=python3
-
+alias sd='function _sd(){ shutdown.exe /s /t $(( $1 * 60 )); }; _sd'
+# alias sda="shutdown.exe /a"
+function sda() {
+  if [ -z "$1" ]; then
+    echo "You must provide a reason, e.g.: sda \"Need to finish some work\""
+    return 1
+  fi
+  shutdown.exe /a
+  # Save the date and the comment in a log file
+  echo "$(date '+%Y-%m-%d %H:%M:%S') - $USER aborted shutdown: $*" >> "$HOME/shutdown_abort.log"
+  echo "Shutdown canceled. Reason recorded."
+}
+export -f sda
 
 # Git
-
-
 alias g=git
 alias ga="git add"
 alias gaa="git add -A"
@@ -87,20 +89,21 @@ alias gds="git diff --staged"
 alias gf="git fetch"
 alias gl="git pull"
 alias gp="git push"
+alias gpu="git push -u origin HEAD"
 alias gst="git status"
 alias gss="git status --short"
-alias glog="git log"
-alias gg="glog"
+alias gg="git log"
 alias ggol="git log --pretty='%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
-alias glogol="ggol"
 alias gc="git commit --verbose"
 alias gci="gc"
-alias gc!="git commit --verbose --amend"
-alias gci!="gc!"
-
+alias gca="git commit --verbose --amend"
+alias gc!="git commit --verbose --amend --no-edit"
 # Docker
-
-
 alias dk=docker
 alias dkc="docker-compose"
+# Python
+alias py=python3
+# IDE
+alias cu='cursor .'
+alias ws='windsurf .'
 ```
